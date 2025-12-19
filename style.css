@@ -238,7 +238,8 @@ body {
 
 .job-description {
   list-style-position: outside;
-  margin-left: 1.25rem;
+  margin-left: 2.5rem;
+  /* Increased indentation */
   color: var(--text-muted);
 }
 
