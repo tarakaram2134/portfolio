@@ -147,6 +147,126 @@ body {
   margin: 0 auto 2rem;
 }
 
+/* Experience Section - Timeline */
+.experience-section {
+  background: rgba(15, 23, 42, 0.4);
+  /* Slightly different shade */
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* The vertical line */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background: var(--glass-border);
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  /* Aligned to left */
+  margin-left: -1px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-left: 60px;
+  /* Space for dot and line */
+}
+
+.timeline-dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 12px;
+  /* Center on the line (20px left) -> 20 - 8 = 12 */
+  top: 24px;
+  background: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--accent-glow);
+  z-index: 10;
+}
+
+.timeline-content {
+  background: var(--card-bg);
+  border: 1px solid var(--glass-border);
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-color: var(--accent-glow);
+}
+
+.timeline-header {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--glass-border);
+  padding-bottom: 1rem;
+}
+
+.timeline-header h3 {
+  color: var(--text-main);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.timeline-header .company {
+  display: block;
+  font-size: 1.1rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.timeline-header .date {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+.job-description {
+  list-style-position: outside;
+  margin-left: 1.25rem;
+  color: var(--text-muted);
+}
+
+.job-description li {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Responsive adjustment for timeline */
+@media (max-width: 600px) {
+  .timeline::after {
+    left: 10px;
+  }
+
+  .timeline-item {
+    padding-left: 40px;
+  }
+
+  .timeline-dot {
+    left: 2px;
+  }
+
+  .timeline-header h3 {
+    font-size: 1.25rem;
+  }
+}
+
 /* General Sections */
 section {
   padding: 6rem 0;
