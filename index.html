@@ -4,298 +4,205 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Taraka Ram Donepudi | Portfolio</title>
+  <title>tarak@portfolio: ~</title>
 
-  <!-- Google Fonts: Outfit -->
+  <!-- Google Fonts: Fira Code for Monospace goodness -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
 
   <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
 </head>
 
 <body>
-  <header class="navbar">
-    <div class="container">
-      <h1 class="logo">Taraka Ram Donepudi</h1>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#certifications">Certifications</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+  <div class="terminal-container">
+
+    <!-- Navbar as a help command output or simple status line -->
+    <header class="terminal-header">
+      <span class="prompt">tarak@portfolio:~$</span> <span class="command">./navigation.sh</span>
+      <nav class="terminal-nav">
+        <a href="#about">[01-About]</a>
+        <a href="#experience">[02-Experience]</a>
+        <a href="#projects">[03-Projects]</a>
+        <a href="#certifications">[04-Certifications]</a>
+        <a href="#contact">[05-Contact]</a>
       </nav>
-    </div>
-  </header>
+    </header>
 
-  <section id="hero" class="hero-section">
-    <div class="container">
-      <h2>Hello, I'm Taraka Ram Donepudi</h2>
-      <p>Aspiring AI Engineer who builds things with code.</p>
-    </div>
-  </section>
+    <main>
+      <section id="hero" class="terminal-section">
+        <div class="command-line">
+          <span class="prompt">tarak@portfolio:~$</span> <span class="command">whoami</span>
+        </div>
+        <div class="output-content typing-target">
+          <h1>Taraka Ram Donepudi</h1>
+          <p>> Aspiring AI Engineer.</p>
+          <p>> Builder of things with code.</p>
+        </div>
+      </section>
 
-  <section id="about" class="about-section">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>
-        I'm a master's student in Computer Science with a sharp focus on AI, ML, and practical problem-solving. I enjoy
-        building things that are both functional and meaningful — whether it's a full-stack app, a machine learning
-        model, or a small automation tool that makes life easier.
-        My journey in tech started with a fascination for how things work, and it has evolved into a passion for
-        creating solutions that blend clean design with smart technology. I thrive on challenges and love learning new
-        skills, especially when it comes to making complex ideas accessible and useful.
-        I have hands-on experience with HTML, CSS, Python, and modern ML frameworks. Recently, I’ve been diving deeper
-        into projects that combine clean design with smart tech, and this portfolio is a growing archive of that
-        journey. Outside of code, I’m the kind of person who reads docs for fun, rewrites their scripts to be cleaner
-        just because, and always has at least one side project in progress.
-      </p>
-    </div>
-  </section>
+      <section id="about" class="terminal-section">
+        <div class="command-line">
+          <span class="prompt">tarak@portfolio:~$</span> <span class="command">cat about_me.txt</span>
+        </div>
+        <div class="output-content typing-target">
+          <p>
+            I'm a master's student in Computer Science focused on AI, ML, and practical problem-solving.
+            My journey started with curiosity and evolved into a passion for building solutions that blend clean design
+            with smart tech.
+            I have hands-on experience with HTML, CSS, Python, and modern ML frameworks.
+            Outside of code, I read docs for fun and refactor scripts to be cleaner.
+          </p>
+        </div>
+      </section>
 
-  <section id="experience" class="experience-section">
-    <div class="container">
-      <h2>Professional Experience</h2>
-      <div class="timeline">
+      <section id="experience" class="terminal-section">
+        <div class="command-line">
+          <span class="prompt">tarak@portfolio:~$</span> <span class="command">tail -n 10 experience.log</span>
+        </div>
+        <div class="output-content typing-target">
 
-        <!-- Job 1 -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <h3>AI Research Fellowship</h3>
-              <span class="company">Handshake AI</span>
-              <span class="date">Oct 2025 – December 2025</span>
-            </div>
-            <ul class="job-description">
-              <li>Reviewed large volumes of model outputs to identify reasoning flaws, factual mistakes, and recurring
-                failure patterns.</li>
-              <li>Built Python utilities that parsed AI responses, flagged structural or semantic anomalies, and
-                generated polished summaries.</li>
-              <li>Designed targeted test sets to evaluate reasoning depth, factual reliability, and strict adherence to
-                output rules.</li>
-              <li>Added layered validation checks and refined prompts to stabilize behavior, reduce inconsistencies, and
-                boost overall accuracy.</li>
+          <div class="log-entry">
+            <span class="timestamp">[Oct 2025 - Dec 2025]</span>
+            <strong class="role">AI Research Fellowship</strong> @ <span class="company">Handshake AI</span>
+            <ul>
+              <li>- Reviewed large volumes of model outputs for reasoning flaws.</li>
+              <li>- Built Python utilities to flag anomalies and generate summaries.</li>
+              <li>- Designed targeted test sets for evaluating reasoning depth.</li>
             </ul>
           </div>
-        </div>
 
-        <!-- Job 2 -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <h3>AI Engineer Intern</h3>
-              <span class="company">TECH GIANT</span>
-              <span class="date">Jan 2025 – Sep 2025</span>
-            </div>
-            <ul class="job-description">
-              <li>Developed a conversational chatbot using the ChatGPT MCP platform and API to automate guest support
-                tasks such as reservations, room-service queries, property information, and troubleshooting.</li>
-              <li>Designed MCP tools and custom endpoints to let the chatbot securely access internal hospitality
-                systems, retrieve real-time data.</li>
-              <li>Built prompt flows and guardrail logic to control model behavior, reduce hallucination, and ensure
-                consistent responses.</li>
-              <li>Integrated the chatbot into the client’s operational environment, improving response times and
-                reducing load on customer support.</li>
+          <div class="log-entry">
+            <span class="timestamp">[Jan 2025 - Sep 2025]</span>
+            <strong class="role">AI Engineer Intern</strong> @ <span class="company">TECH GIANT</span>
+            <ul>
+              <li>- Developed a conversational chatbot using ChatGPT MCP platform.</li>
+              <li>- Designed MCP tools for secure internal system access.</li>
+              <li>- Built prompt flows and guardrail logic to reduce hallucinations.</li>
             </ul>
           </div>
-        </div>
 
-        <!-- Job 3 -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <h3>Data Automation Engineer</h3>
-              <span class="company">Vaymode</span>
-              <span class="date">Jan 2024 – Aug 2024</span>
-            </div>
-            <ul class="job-description">
-              <li>Wrote complex SQL queries for cost/usage analytics, anomaly detection, and ad-hoc business questions.
-              </li>
-              <li>Engineered Python pipelines to ingest and normalize material cost data, utility expenses, and
-                machinery usage.</li>
-              <li>Built Python ETL jobs and SQL transformations that integrated cost datasets into reporting dashboards.
-              </li>
-              <li>Worked with cost, utility, and spending datasets to surface financial anomalies and improve
-                decision-making.</li>
+          <div class="log-entry">
+            <span class="timestamp">[Jan 2024 - Aug 2024]</span>
+            <strong class="role">Data Automation Engineer</strong> @ <span class="company">Vaymode</span>
+            <ul>
+              <li>- Wrote complex SQL queries for analytics and anomaly detection.</li>
+              <li>- Engineered Python pipelines for data ingestion.</li>
+              <li>- Built ETL jobs for reporting dashboards.</li>
             </ul>
           </div>
-        </div>
 
-        <!-- Job 4 -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <h3>Project Assistant</h3>
-              <span class="company">PVPSIT</span>
-              <span class="date">Aug 2022 – Jan 2024</span>
-            </div>
-            <ul class="job-description">
-              <li>Processed and cleaned up 10,000+ student and scholarship records, standardizing data for analysis,
-                reporting, and long-term tracking.</li>
-              <li>Built automated email workflows that delivered 1,500+ fee-due reminders each cycle, cutting manual
-                admin effort by 70%.</li>
-              <li>Produced concise insights that improved visibility into fee trends and scholarship distribution across
-                5+ departments.</li>
+          <div class="log-entry">
+            <span class="timestamp">[Aug 2022 - Jan 2024]</span>
+            <strong class="role">Project Assistant</strong> @ <span class="company">PVPSIT</span>
+            <ul>
+              <li>- Processed 10,000+ student records.</li>
+              <li>- Automating email workflows for fee reminders.</li>
             </ul>
           </div>
+
         </div>
+      </section>
 
-      </div>
-    </div>
-  </section>
-
-  <section id="projects" class="projects-section">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="project-grid">
-
-        <div class="flip-card">
-          <div class="flip-card-inner">
-
-            <div class="flip-card-front visual-front">
-              <img src="assets/Edumate.png" alt="EduMate Preview" class="flip-image" />
-              <h3 class="flip-title">EduMate</h3>
-            </div>
-
-            <div class="flip-card-back">
-              <p>A RAG-powered assistant that answers questions from course notes using local LLMs. Built using
-                LangChain, FAISS, and local inference.</p>
-              <div class="tech-stack">Python • LangChain • FAISS • LLM</div>
-              <a href="https://github.com/tarakaram2134/EduMate" target="_blank">View on GitHub</a>
-            </div>
-
-          </div>
+      <section id="projects" class="terminal-section">
+        <div class="command-line">
+          <span class="prompt">tarak@portfolio:~$</span> <span class="command">ls -la ./projects/</span>
         </div>
+        <div class="output-content typing-target">
 
-
-        <div class="flip-card">
-          <div class="flip-card-inner">
-
-            <div class="flip-card-front visual-front">
-              <img src="assets/Dermatological.png" alt="Dermatological Diagnosis Preview" class="flip-image" />
-              <h3 class="flip-title">Dermatological Diagnosis</h3>
+          <div class="file-list">
+            <div class="file-item">
+              <span class="permissions">-rwxr-xr-x</span> <span class="owner">tarak</span> <strong
+                class="filename">Multimodal_Chatbot</strong>
+              <p class="description">Gemini-powered chatbot handling text & images. Tech: FastAPI, LangChain, LangGraph,
+                ChromaDB.</p>
+              <a href="https://github.com/tarakaram2134/Multimodal-Chatbot" target="_blank" class="link">[View
+                Source]</a>
             </div>
-            <div class="flip-card-back">
-              <p>Skin lesion classifier using LeNet-style CNN trained with PyTorch and TensorFlow on the HAM10000
-                dataset.</p>
-              <div class="tech-stack">PyTorch • TensorFlow • CNN</div>
+
+            <div class="file-item">
+              <span class="permissions">-rwxr-xr-x</span> <span class="owner">tarak</span> <strong
+                class="filename">EduMate</strong>
+              <p class="description">RAG-powered assistant for course notes. Tech: Python, LangChain, FAISS.</p>
+              <a href="https://github.com/tarakaram2134/EduMate" target="_blank" class="link">[View Source]</a>
+            </div>
+
+            <div class="file-item">
+              <span class="permissions">-rwxr-xr-x</span> <span class="owner">tarak</span> <strong
+                class="filename">Dermatological_Diagnosis</strong>
+              <p class="description">Skin lesion classifier using CNN (PyTorch/TensorFlow). Dataset: HAM10000.</p>
               <a href="https://github.com/tarakaram2134/-Enhancing-Dermatological-Diagnosis-using-Deep-Learning"
-                target="_blank">View on GitHub</a>
+                target="_blank" class="link">[View Source]</a>
+            </div>
+
+            <div class="file-item">
+              <span class="permissions">-rwxr-xr-x</span> <span class="owner">tarak</span> <strong
+                class="filename">Image_Captioning</strong>
+              <p class="description">Xception + LSTM based image captioning system. Dataset: Flickr8k.</p>
+              <a href="https://github.com/tarakaram2134/ImageCaptioning" target="_blank" class="link">[View Source]</a>
+            </div>
+
+            <div class="file-item">
+              <span class="permissions">-rwxr-xr-x</span> <span class="owner">tarak</span> <strong
+                class="filename">Car_Review_Sentiment</strong>
+              <p class="description">Multi-class sentiment classifier for car reviews. Tech: Scikit-learn, NLP.</p>
+              <a href="https://huggingface.co/spaces/Tarak2134/CarReviews_Classification" target="_blank"
+                class="link">[View Demo]</a>
             </div>
           </div>
-        </div>
 
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front visual-front">
-              <img src="assets/Image_Captioning.png" alt="Image_Captioning Preview" class="flip-image" />
-              <h3 class="flip-title">Image Captioning</h3>
-            </div>
-            <div class="flip-card-back">
-              <p>A TensorFlow-based system combining Xception (for image features) and LSTM (for captioning) trained on
-                the Flickr8k dataset.</p>
-              <div class="tech-stack">TensorFlow • CNN • LSTM</div>
-              <a href="https://github.com/tarakaram2134/ImageCaptioning" target="_blank">View on GitHub</a>
-            </div>
-          </div>
         </div>
+      </section>
 
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front visual-front">
-              <img src="assets/Car_Review.png" alt="Car Review Preview" class="flip-image" />
-              <h3 class="flip-title">Car Review Sentiment Classifier</h3>
-            </div>
-            <div class="flip-card-back">
-              <p>Multi-class sentiment classifier built on a custom-labeled car reviews dataset. Predicts positive,
-                negative, or neutral sentiment.</p>
-              <div class="tech-stack">Python • Scikit-learn • NLP</div>
-              <a href="https://huggingface.co/spaces/Tarak2134/CarReviews_Classification" target="_blank">View on
-                Hugging Face</a>
-            </div>
-          </div>
+      <section id="certifications" class="terminal-section">
+        <div class="command-line">
+          <span class="prompt">tarak@portfolio:~$</span> <span class="command">cat certifications.json</span>
         </div>
+        <div class="output-content typing-target">
+          <ul class="cert-list">
+            <li>{ "name": "Complete SQL Bootcamp", "issuer": "Udemy" } <a href="assets/Sql_Certificate.jpg"
+                target="_blank">[View]</a></li>
+            <li>{ "name": "Data Analysis with R", "issuer": "Google" } <a
+                href="https://www.coursera.org/account/accomplishments/verify/BSQASWBZ2ZHV" target="_blank">[View]</a>
+            </li>
+            <li>{ "name": "Programming with Java", "issuer": "NPTEL" } <a
+                href="https://archive.nptel.ac.in/content/noc/NOC22/SEM2/Ecertificates/106/noc22-cs102/Course/NPTEL22CS102S5416230910021300.jpg"
+                target="_blank">[View]</a></li>
+            <li>{ "name": "Python Essentials 2", "issuer": "CISCO" } <a
+                href="https://www.credly.com/badges/3f5f3812-93ea-41d4-820c-1bfc4719321a/linked_in_profile"
+                target="_blank">[View]</a></li>
+            <li>{ "name": "Cyber Security Fundamentals", "issuer": "Palo Alto" } <a href="assets/CyberSecurity.png"
+                target="_blank">[View]</a></li>
+            <li>{ "name": "AWS Cloud Foundations", "issuer": "AWS" } <a
+                href="https://www.credly.com/badges/9c3e9ace-17d4-4fb1-9858-be5f17c232c7/linked_in_profile"
+                target="_blank">[View]</a></li>
+            <li>{ "name": "AWS ML Foundations", "issuer": "AWS" } <a
+                href="https://www.credly.com/badges/ea4a9686-1a54-40d0-bd84-3b0f31018ca3/linked_in_profile"
+                target="_blank">[View]</a></li>
+            <li>{ "name": "Python Essentials 1", "issuer": "CISCO" } <a
+                href="https://www.credly.com/badges/d6428260-ecdb-4bd7-8c67-92f82675a41a/linked_in_profile"
+                target="_blank">[View]</a></li>
+          </ul>
+        </div>
+      </section>
 
-      </div>
-    </div>
-  </section>
+      <section id="contact" class="terminal-section">
+        <div class="command-line">
+          <span class="prompt">tarak@portfolio:~$</span> <span class="command">echo $CONTACT</span>
+        </div>
+        <div class="output-content typing-target">
+          <p>tarakaram2134@gmail.com</p>
+        </div>
+      </section>
+    </main>
 
-  <section id="certifications" class="certifications-section">
-    <div class="container">
-      <h2>Certifications</h2>
-      <div class="certifications-grid">
+    <footer class="terminal-footer">
+      <p>&copy; 2025 Taraka Ram Donepudi | <span class="status">System Normal</span></p>
+    </footer>
 
-        <div class="cert-item">
-          <img src="assets/sql.png" alt="SQL Bootcamp" />
-          <h4>The Complete SQL Bootcamp-Udemy</h4>
-          <a href="assets/Sql_Certificate.jpg" target="_blank" class="view-cert-btn">View Certificate</a>
-        </div>
-
-        <div class="cert-item">
-          <img src="assets/DataAnalysis.jpg" alt="Data Analysis with R Programming-Google" />
-          <h4>Data Analysis with R Programming-Google</h4>
-          <a href="https://www.coursera.org/account/accomplishments/verify/BSQASWBZ2ZHV" target="_blank"
-            class="view-cert-btn">View Certificate</a>
-        </div>
-        <div class="cert-item">
-          <img src="assets/NPTEL.png" alt="Programming with Java-NPTEL" />
-          <h4>Programming with Java-NPTEL</h4>
-          <a href="https://archive.nptel.ac.in/content/noc/NOC22/SEM2/Ecertificates/106/noc22-cs102/Course/NPTEL22CS102S5416230910021300.jpg"
-            target="_blank" class="view-cert-btn">View Certificate</a>
-        </div>
-        <div class="cert-item">
-          <img src="assets/CISCO-Logo.png" alt="Python Essentials 2-CISCO" />
-          <h4>Python Essentials 2-CISCO</h4>
-          <a href="https://www.credly.com/badges/3f5f3812-93ea-41d4-820c-1bfc4719321a/linked_in_profile" target="_blank"
-            class="view-cert-btn">View Certificate</a>
-        </div>
-        <div class="cert-item">
-          <img src="assets/PaloAlto.png" alt="Cyber Security Fundamentals" />
-          <h4>Cyber Security Fundamentals-Palo Alto Networks</h4>
-          <a href="assets/CyberSecurity.png" target="_blank" class="view-cert-btn">View Certificate</a>
-        </div>
-        <div class="cert-item">
-          <img src="assets/AWS-Cloud.png" alt="AWS Academy Cloud Foundations" />
-          <h4>AWS Academy Cloud Foundations</h4>
-          <a href="https://www.credly.com/badges/9c3e9ace-17d4-4fb1-9858-be5f17c232c7/linked_in_profile" target="_blank"
-            class="view-cert-btn">View Certificate</a>
-        </div>
-        <div class="cert-item">
-          <img src="assets/AWS-ML.png" alt="AWS Academy Machine Learning Foundations" />
-          <h4>AWS Academy Machine Learning Foundations</h4>
-          <a href="https://www.credly.com/badges/ea4a9686-1a54-40d0-bd84-3b0f31018ca3/linked_in_profile" target="_blank"
-            class="view-cert-btn">View Certificate</a>
-        </div>
-        <div class="cert-item">
-          <img src="assets/CISCO-Logo.png" alt="Python Essentials 1" />
-          <h4>Python Essentials 1-CISCO</h4>
-          <a href="https://www.credly.com/badges/d6428260-ecdb-4bd7-8c67-92f82675a41a/linked_in_profile" target="_blank"
-            class="view-cert-btn">View Certificate</a>
-        </div>
-      </div>
-  </section>
-
-
-
-  <section id="contact" class="contact-section">
-    <div class="container">
-      <h2>Contact</h2>
-      <p>Let's get in touch: tarakaram2134@gmail.com</p>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Taraka Ram Donepudi. All rights reserved.</p>
-    </div>
-  </footer>
+  </div>
 </body>
 
 </html>
