@@ -77,6 +77,8 @@
               <li>Built semantic search across approximately 40,000 production RT tickets with BGE-M3 embeddings and Qdrant, returning the five most relevant historical cases.</li>
               <li>Integrated live RT REST API context into a RAG pipeline that produces ticket summaries in about 25 seconds.</li>
               <li>Developed a resolution-time prediction workflow with approximately three-second inference and added automated pytest coverage to the existing codebase.</li>
+              <li>Chose similarity-based retrieval over classification for resolving-time prediction after evaluating both against widely spread resolution times, delivering predictions in about 3 seconds.</li>
+              <li>Validated retrieval quality across 1,000 tickets with support staff reviewing the generated summaries.</li>
             </ul>
           </div>
         </article>
@@ -87,6 +89,7 @@
             <ul>
               <li>Completed more than 3,000 structured evaluation entries across 500+ prompts and test cases for GPT-class language models.</li>
               <li>Red-teamed model outputs, documented behavioral issues, and escalated complex discrepancies to development teams.</li>
+              <li>Documented findings with clear reproduction steps so engineering teams could act on them directly.</li>
             </ul>
           </div>
         </article>
@@ -94,10 +97,8 @@
           <div class="timeline-meta"><span>Jan 2025 – Sep 2025</span><span>Remote</span></div>
           <div class="timeline-content">
             <h3>Software Engineer Intern</h3><p class="company">Infyni</p>
-            <ul>
-              <li>Supported AI pipelines, data-processing workflows, and multi-database operations for a production EdTech platform.</li>
-              <li>Partnered with operations and product teams to research source systems and complete missing or inconsistent records.</li>
-            </ul>
+            <p>Built Django backend services and React interfaces for an EdTech platform serving real learners in production. Extended Django services to fetch and reconcile missing records across multiple relational database systems, working from requirements set with product and operations teams. Reviewed teammates' pull requests for design, readability, and test coverage.</p>
+            <p><strong>Stack:</strong> Python, Django, React, TypeScript, SQL, Docker</p>
           </div>
         </article>
         <article class="timeline-item">
@@ -122,29 +123,34 @@
         <article class="project-card featured">
           <div class="project-top"><span class="project-index">01</span><span>Newest</span></div>
           <h3>Diagram Review Copilot</h3>
-          <p>Turns architecture-diagram images into structured graphs using OpenCV and Tesseract OCR, then flags direct database access, missing auth, isolated components, and missing response paths.</p>
-          <ul class="metrics"><li>32 automated tests</li><li>5 generated scenarios</li></ul>
+          <p><strong>My role:</strong> Solo project. I built the image-processing and OCR pipeline, the explanation logic, the Streamlit interface, and the test suite.</p>
+          <p>Reads architecture diagrams and flow diagrams from uploaded images and explains what the system is doing in plain language. It uses OpenCV and Tesseract OCR to extract components, labels, and connections, then uses Llama to produce a detailed description of how data or control moves through the diagram.</p>
+          <p><strong>Outcome:</strong> 90% accuracy on flow diagrams and 88% on architecture diagrams, validated by 32 pytest tests across 5 diagram scenarios.</p>
           <div class="tags"><span>Python</span><span>OpenCV</span><span>OCR</span><span>Streamlit</span><span>pytest</span></div>
           <a class="project-link" href="https://github.com/tarakaram2134/Diagram-copilot" target="_blank" rel="noreferrer">View source <span>↗</span></a>
         </article>
         <article class="project-card featured">
           <div class="project-top"><span class="project-index">02</span><span>Streaming</span></div>
           <h3>SentinelStream</h3>
-          <p>Production-oriented anomaly detection pipeline with Kafka-compatible Redpanda transport, Isolation Forest and adaptive baselines, plus Prometheus and Grafana observability.</p>
-          <ul class="metrics"><li>9,000 events evaluated</li><li>0.999 adaptive F1</li></ul>
+          <p><strong>My role:</strong> Solo project. I designed the streaming pipeline, built the detection logic, set up GitHub Actions CI/CD, and instrumented it with Prometheus and Grafana.</p>
+          <p>Production-oriented anomaly detection pipeline with Redpanda (Kafka API) transport, Isolation Forest and adaptive baselines, plus Prometheus and Grafana observability.</p>
+          <p><strong>Outcome:</strong> Evaluated 9,000 events and achieved 0.999 adaptive F1.</p>
           <div class="tags"><span>Python</span><span>Kafka</span><span>Docker</span><span>Prometheus</span></div>
           <a class="project-link" href="https://github.com/tarakaram2134/sentinelstream" target="_blank" rel="noreferrer">View source <span>↗</span></a>
         </article>
         <article class="project-card">
           <div class="project-top"><span class="project-index">03</span><span>RAG</span></div>
           <h3>EduMate</h3>
+          <p><strong>My role:</strong> Solo project. I built the RAG pipeline with LangChain and FAISS, the FastAPI backend, and the Gradio interface, and evaluated it on 500+ QA pairs.</p>
           <p>Local-first educational assistant with persistent semester knowledge bases and temporary document Q&amp;A sessions without sending notes to external services.</p>
+          <p><strong>Outcome:</strong> 22% accuracy improvement over the baseline, with responses under 500ms.</p>
           <div class="tags"><span>LangChain</span><span>FAISS</span><span>Mistral</span><span>Gradio</span></div>
           <a class="project-link" href="https://github.com/tarakaram2134/Edumate" target="_blank" rel="noreferrer">View source <span>↗</span></a>
         </article>
         <article class="project-card">
           <div class="project-top"><span class="project-index">04</span><span>Analytics</span></div>
           <h3>Feature Impact Analysis</h3>
+          <p><strong>My role:</strong> Solo project. I designed the three-layer PostgreSQL data mart and its 8 reporting tables, built the Power BI and Tableau dashboards, and wrote the documentation explaining each metric.</p>
           <p>End-to-end SaaS product analytics workflow covering a three-layer warehouse, adoption funnels, cohort retention, and revenue impact.</p>
           <ul class="metrics"><li>87% eligible-user adoption</li><li>10–30 pt retention lift</li></ul>
           <div class="tags"><span>SQL</span><span>PostgreSQL</span><span>Python</span><span>Product Analytics</span></div>
@@ -153,17 +159,28 @@
         <article class="project-card">
           <div class="project-top"><span class="project-index">05</span><span>Statistical</span></div>
           <h3>Claims Leakage Analytics</h3>
+          <p><strong>My role:</strong> Solo project. I modeled 1.2M synthetic claims in PostgreSQL, wrote the SQL analysis, and applied Empirical Bayes scoring to flag outlier providers.</p>
           <p>Audit-ready provider benchmarking pipeline that decomposes spend, applies Empirical Bayes shrinkage, and stabilizes noisy outlier detection.</p>
-          <ul class="metrics"><li>1.2M synthetic claims</li><li>$9.93M increase analyzed</li></ul>
+          <p><strong>Outcome:</strong> Identified a $9.93M cost increase and flagged outlier providers hidden inside aggregate totals.</p>
           <div class="tags"><span>SQL</span><span>PostgreSQL</span><span>Python</span><span>Empirical Bayes</span></div>
           <a class="project-link" href="https://github.com/tarakaram2134/claims-leakage" target="_blank" rel="noreferrer">View source <span>↗</span></a>
         </article>
         <article class="project-card">
           <div class="project-top"><span class="project-index">06</span><span>Multimodal</span></div>
           <h3>Multimodal Chatbot</h3>
+          <p><strong>My role:</strong> Solo project. I designed the modular three-layer architecture and built the FastAPI backend and Streamlit frontend.</p>
           <p>Modular RAG app that accepts text, images, and documents, retrieves relevant context, and returns grounded responses through FastAPI and Streamlit.</p>
+          <p><strong>Outcome:</strong> Delivered responses in less than 4 seconds, used more than 300 documents, and tested with 50 documents.</p>
           <div class="tags"><span>FastAPI</span><span>Streamlit</span><span>RAG</span><span>Embeddings</span></div>
           <a class="project-link" href="https://github.com/tarakaram2134/Multimodal-Chatbot" target="_blank" rel="noreferrer">View source <span>↗</span></a>
+        </article>
+        <article class="project-card">
+          <div class="project-top"><span class="project-index">07</span><span>Research</span></div>
+          <h3>Software Design Automation</h3>
+          <p><strong>My role:</strong> I built the full pipeline for requirement classification, model fine-tuning, and diagram generation.</p>
+          <p>The system classifies software requirements as functional or non-functional, sorts non-functional requirements into subcategories, and generates UML and architecture diagrams with PlantUML. I compared Mistral 7B and Llama 3B Instruct, used LoRA/QLoRA to fine-tune models on a laptop with a 6GB GPU, and evaluated OpenAI and DeepSeek models for PlantUML diagram generation.</p>
+          <p><strong>Outcome:</strong> 90% accuracy classifying requirements into functional and non-functional subcategories.</p>
+          <div class="tags"><span>Python</span><span>PyTorch</span><span>Hugging Face</span><span>LoRA/QLoRA</span><span>PlantUML</span></div>
         </article>
       </div>
     </section>
@@ -176,7 +193,7 @@
       <div class="skill-grid panel">
         <div><h3>AI &amp; ML</h3><p>PyTorch, TensorFlow, Hugging Face, RAG, semantic search, LLM evaluation, LoRA/QLoRA, MLflow</p></div>
         <div><h3>Data &amp; streaming</h3><p>PostgreSQL, MySQL, SQL, ETL pipelines, Kafka, data validation, Power BI, Tableau, Excel</p></div>
-        <div><h3>Backend &amp; platforms</h3><p>Python, FastAPI, Flask, Django, REST APIs, Docker, Linux, GitHub Actions, Prometheus</p></div>
+        <div><h3>Backend, web &amp; platforms</h3><p>Python, FastAPI, Flask, Django, React, REST APIs, Docker, Linux, GitHub Actions, Prometheus</p></div>
         <div><h3>Retrieval &amp; agents</h3><p>LangChain, LangGraph, FAISS, Qdrant, LlamaIndex, Semantic Kernel, OpenAI API, Gemini API</p></div>
         <div><h3>Cloud</h3><p>AWS S3, EC2, Lambda, Amazon Bedrock, Azure Synapse, Azure Data Factory, DigitalOcean</p></div>
         <div><h3>Languages</h3><p>Python, SQL, R, JavaScript, TypeScript, Java, Go, Bash, C++, Rust</p></div>
